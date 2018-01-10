@@ -186,13 +186,6 @@ def assignment_1f():
     fig.clf()
 
 
-assignment_1a()
-assignment_1b()
-assignment_1c()
-assignment_1d()
-assignment_1e()
-assignment_1f()
-
 if len(sys.argv) < 2:
     print("Please enter which part do you want to execute - a, b, c, d or all")
     exit()
