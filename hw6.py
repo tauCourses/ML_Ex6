@@ -43,6 +43,7 @@ zero_train_data = train_data[train_labels == -1]
 
 
 def PCA(x):
+    x = sklearn.preprocessing.scale(x, axis=0, with_std=False)
     x_t = numpy.transpose(x)
     x_t_dot_x = numpy.dot(x_t, x)
     w, v = LA.eigh(x_t_dot_x)
@@ -184,6 +185,13 @@ def assignment_1f():
     fig.savefig(os.path.join(dir_path, 'PCA_objective.png'))
     fig.clf()
 
+
+assignment_1a()
+assignment_1b()
+assignment_1c()
+assignment_1d()
+assignment_1e()
+assignment_1f()
 
 if len(sys.argv) < 2:
     print("Please enter which part do you want to execute - a, b, c, d or all")
